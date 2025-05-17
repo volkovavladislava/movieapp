@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">mymovieapp</string>
+    <string name="no_movies_selected">Нет выбранных фильмов для просмотра</string>
+    <string name="add_movie">Добавить фильм</string>
+    <string name="delete_selected">Удалить выбранные</string>
+    <string name="movie_name_hint">Название фильма</string>
+    <string name="movie_year_hint">Год выпуска</string>
+    <string name="search">Поиск</string>
+    <string name="poster">Постер фильма</string>
+    <string name="movie_poster">Постер фильма</string>
+    <string name="delete_movie">Удалить фильм</string>
+</resources>
