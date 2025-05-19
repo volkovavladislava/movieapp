@@ -43,15 +43,9 @@ class AddActivity : AppCompatActivity(), AddMovieContract.ViewInterface {
 
         binding.btnSearch.setOnClickListener {
             val query = binding.etMovieName.text.toString().trim()
-//            if (query.isNotEmpty()) {
-//                val intent = Intent(this, SearchActivity::class.java)
-//                intent.putExtra("query", query)
-//                intent.putExtra("year", binding.etMovieYear.text.toString().trim())
-//                startActivityForResult(intent, REQUEST_CODE_SEARCH)
-//            }
             val year = binding.etMovieYear.text.toString().trim()
             if (query.isNotEmpty()) {
-                addMoviePresenter.handleSearchRequest(query, year) // Передаём запрос в Presenter
+                addMoviePresenter.handleSearchRequest(query, year)
             } else {
                 showSearchError("Введите название фильма")
             }
@@ -59,8 +53,6 @@ class AddActivity : AppCompatActivity(), AddMovieContract.ViewInterface {
 
         binding.btnAddMovie.setOnClickListener {
             selectedMovie?.let {
-//                viewModel.addMovie(it)
-//                finish()
                 addMoviePresenter.handleAddMovie(it)
             }
         }
@@ -71,14 +63,6 @@ class AddActivity : AppCompatActivity(), AddMovieContract.ViewInterface {
             data?.getSerializableExtra(EXTRA_SELECTED_MOVIE)?.let { extra ->
                 if (extra is MovieEntity) {
                     showMovieDetails(extra)
-//                    selectedMovie = extra
-//                    binding.etMovieName.setText(selectedMovie?.title)
-//                    binding.etMovieYear.setText(selectedMovie?.year)
-//                    binding.imgPoster.visibility = android.view.View.VISIBLE
-//                    Glide.with(this)
-//                        .load(selectedMovie?.posterUrl)
-//                        .into(binding.imgPoster)
-//                    binding.btnAddMovie.visibility = android.view.View.VISIBLE
                 }
             }
         }
@@ -118,16 +102,8 @@ class AddActivity : AppCompatActivity(), AddMovieContract.ViewInterface {
 
     override fun onDestroy() {
         super.onDestroy()
-        addMoviePresenter.detachView() // Важно для избежания утечек памяти
+        addMoviePresenter.detachView()
     }
 
-//    override  fun  displayMessage (message: String ) {
-//        Toast.makeText( this , String,
-//            Toast.LENGTH_LONG).show()
-//    }
-//
-//    override  fun  displayError (message: String ) {
-//        displayMessage (message)
-//
-//    }
+
 }

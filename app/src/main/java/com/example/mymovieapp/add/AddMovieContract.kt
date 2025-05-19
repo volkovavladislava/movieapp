@@ -10,9 +10,6 @@ class  AddMovieContract  {
 
     interface  ViewInterface  {
         fun  returnToMain ()
-//        fun  displayMessage (message: String )
-//        fun  displayError (message: String )
-
 
         fun showMovieDetails(movie: MovieEntity)
         fun showSearchError(message: String)

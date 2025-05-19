@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity(),  MainContract.ViewInterface  {
         MovieAdapter(
             movies = emptyList(),
             onDeleteClick = { movie ->
-//                showDeleteConfirmationDialog(movie)
                 mainPresenter.showDeleteConfirmation(movie)
             }
         )
@@ -125,8 +124,7 @@ class MainActivity : AppCompatActivity(),  MainContract.ViewInterface  {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_delete -> {
-//                mainPresenter.onDeleteTapped(adapter.selectedMovies)
-                true // Возвращаем true, т.к. событие обработано
+                true
             }
             else -> super.onOptionsItemSelected(item)
         }

@@ -26,9 +26,4 @@ class LocalDataSource(application: Application) {
         }
     }
 
-//    fun deleteMoviesByIds(ids: List<String>) {
-//        GlobalScope.launch {
-//            movieDao.deleteMoviesByIds(ids)
-//        }
-//    }
 }

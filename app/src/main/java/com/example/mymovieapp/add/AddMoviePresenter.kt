@@ -13,12 +13,10 @@ class AddMoviePresenter(
 ) : AddMovieContract.PresenterInterface {
 
     override fun handleSearchRequest(query: String, year: String) {
-        // Здесь должна быть логика поиска (если SearchActivity тоже использует MVP)
-        // Пока просто делегируем Activity открытие SearchActivity
-//        viewInterface?.showSearchError("Search logic should be implemented")
+
         when {
             query.isEmpty() -> viewInterface?.showSearchError("Введите название фильма")
-            else -> viewInterface?.openSearchScreen(query, year) // Делегируем View открытие экрана
+            else -> viewInterface?.openSearchScreen(query, year)
         }
     }
 
