@@ -1,7 +1,7 @@
 package com.example.mymovieapp.service
 
-import com.example.mymovieapp.data.MovieDetail
-import com.example.mymovieapp.data.SearchResponse
+import com.example.mymovieapp.model.MovieDetail
+import com.example.mymovieapp.model.SearchResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

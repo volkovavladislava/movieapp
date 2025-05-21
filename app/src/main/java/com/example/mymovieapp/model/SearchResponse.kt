@@ -1,4 +1,4 @@
-package com.example.mymovieapp.data
+package com.example.mymovieapp.model
 
 data class SearchResponse(
     val Search: List<MovieItem>?,
