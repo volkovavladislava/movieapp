@@ -15,12 +15,12 @@
         android:theme="@style/Theme.MyMovieApp"
         tools:targetApi="31">
         <activity
-            android:name=".search.SearchActivity"
+            android:name=".presentation.search.SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".add.AddActivity"
+            android:name=".presentation.add.AddActivity"
             android:exported="false" />
-        <activity android:name=".main.MainActivity"
+        <activity android:name=".presentation.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
